@@ -56,31 +56,5 @@ public class MapExample {
         }
         System.out.println("map = " + map);
 
-
-        List<Integer> intList=new ArrayList<>();
-        intList.add(3);
-        intList.add(13);
-        intList.add(35);
-        intList.add(22);
-        intList.add(8);
-
-        System.out.println("intList = " + intList);
-        Iterator<Integer> iterator4 = intList.iterator();
-
-        while (iterator4.hasNext()){
-            if (iterator4.next()>20){
-                iterator4.remove();
-            }
-        }
-
-        for (Integer i : intList) {
-            if (i<20){
-               intList.set(intList.indexOf(i),i+11);
-                //intList.remove(i);
-            }
-        }
-        System.out.println("intList = " + intList);
-
     }
-
 }
