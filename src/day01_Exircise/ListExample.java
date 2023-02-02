@@ -76,7 +76,17 @@ public class ListExample {
         System.out.println("str2.substring(0, 5) = " + str2.substring(0, 5));
         System.out.println("(str==str2.substring(0,5)) = " + (str.equals(str2.substring(0, 5)) ));
 
-         int[] intArr={1,3,5,7};
+
+        //array içinde beşe tam bölünenleri 0 ile değiştirme...
+         int[] intArr={1,3,5,7,9,15,23};
+
+        for (int i = 0; i < intArr.length; i++) {
+            if (intArr[i]%5==0){
+                intArr[i]=0;
+            }
+        }
+
+        System.out.println("Arrays.toString(intArr) = " + Arrays.toString(intArr));
 
     }
 }
