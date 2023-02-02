@@ -44,13 +44,13 @@ public class MapExample {
 //            }
 //
 //        }
-        System.out.println("map = " + map);
+//        System.out.println("map = " + map);
 
         Iterator<Integer> iterator2 = map.values().iterator();
 
         while (iterator2.hasNext()){
-            int next=iterator2.next();
-            if (next>30){
+            int value=iterator2.next();
+            if (value>30){
                 iterator2.remove();
             }
         }
