@@ -19,6 +19,7 @@ public class Question_1 {
     }
 
  //How would you determine whether a string’s characters are all unique?
+    // bütün harfleri benzeresiz (unique ise true değilse false) olmalı..(büyük/küçük harf ayrımı olmaksızın... )
 
     public static boolean allUnique(String str){
         str=str.toLowerCase();
