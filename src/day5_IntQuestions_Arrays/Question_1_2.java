@@ -6,9 +6,9 @@ public class Question_1_2 {
     public static void main(String[] args) {
         int arr[] = {55, 268, 1, 28, 29, 3};
 
-        System.out.println("minOfArr(arr) = " + minOfArr(arr));
-        System.out.println("maxOfArr(arr) = " + maxOfArr(arr));
-        System.out.println("maxOfArr2(arr) = " + maxOfArr2(arr));
+//        System.out.println("minOfArr(arr) = " + minOfArr(arr));
+//        System.out.println("maxOfArr(arr) = " + maxOfArr(arr));
+//        System.out.println("maxOfArr2(arr) = " + maxOfArr2(arr));
         System.out.println("minOfArr2(arr) = " + minOfArr2(arr));
 
     }
