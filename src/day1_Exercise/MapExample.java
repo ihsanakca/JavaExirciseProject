@@ -1,4 +1,4 @@
-package day01_Exircise;
+package day1_Exercise;
 
 import java.util.*;
 

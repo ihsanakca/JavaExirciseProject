@@ -1,4 +1,4 @@
-package day2_InterviewQuestions;
+package day2_InterviewQuestions_String;
 
 public class Question_3 {
     public static void main(String[] args) {

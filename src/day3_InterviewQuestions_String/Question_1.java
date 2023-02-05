@@ -1,4 +1,4 @@
-package day3_InterviewQuestions;
+package day3_InterviewQuestions_String;
 
 import java.util.ArrayList;
 import java.util.List;

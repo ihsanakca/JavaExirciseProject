@@ -1,7 +1,5 @@
-package day3_InterviewQuestions;
+package day3_InterviewQuestions_String;
 
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
