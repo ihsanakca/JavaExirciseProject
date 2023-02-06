@@ -13,7 +13,7 @@ public class Question_3 {
         System.out.println("firstNonDuplicateLetter4(str) = " + firstNonDuplicateLetter4(str));
 
     }
-
+//ilk tekrar etmeyen harf
     public static String firstNonDuplicateLetter(String str) {
         String result = "";
         str = str.toLowerCase().replace(" ", "");
