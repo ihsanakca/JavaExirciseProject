@@ -45,6 +45,14 @@ public class ListExample {
 
         System.out.println("students = " + students);
 
+        Iterator<String> iterator2 = students.iterator();
+        String sum3="";
+        while (iterator2.hasNext()){
+            String s=iterator2.next();
+            sum3+=s;
+        }
+        System.out.println("sum3 = " + sum3);
+
         //students.removeIf(n->n.indexOf("R")==0);
         //students.removeIf(d->d.substring(0,1).equals("S"));
         students.removeIf(a->a.length()==4);
@@ -61,6 +69,30 @@ public class ListExample {
         map.put("Cemal",30);
         map.put("Davut",40);
         map.put("Engin",50);
+
+       Set<String> stringSet = map.keySet();
+        Iterator<String> iterator = map.keySet().iterator();
+        int sum=0;
+        while (iterator.hasNext()){
+            String  s=  iterator.next();
+             sum+=map.get(s);
+
+        }
+
+        Iterator<Integer> iterator1 = map.values().iterator();
+        int sum2=0;
+        while (iterator1.hasNext()){
+           int i= iterator1.next();
+           sum2+=i;
+        }
+
+        System.out.println("sum = " + sum);
+        System.out.println("sum2 = " + sum2);
+
+
+        System.out.println("map.keySet().size() = " + map.keySet().size());
+        System.out.println("map.values().size() = " + map.values().size());
+        System.out.println("map.size() = " + map.size());
 
         System.out.println("map = " + map);
         map.values().removeIf(f->f>30);
@@ -79,6 +111,7 @@ public class ListExample {
 
         //array içinde beşe tam bölünenleri 0 ile değiştirme...
          int[] intArr={1,3,5,7,9,15,23};
+
 
         for (int i = 0; i < intArr.length; i++) {
             if (intArr[i]%5==0){

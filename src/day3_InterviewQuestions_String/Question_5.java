@@ -88,7 +88,7 @@ public class Question_5 {
             return resultList;
     }
 
-    public static List<String > countLetters5(String str){
+    public  static List<String > countLetters5(String str){
         str = str.toLowerCase().replace(" ", "");
         List<String> resultList=new ArrayList<>();
         int[] frequencyArray=new int[26];
@@ -104,5 +104,6 @@ public class Question_5 {
 
         return resultList;
     }
+
 
 }
