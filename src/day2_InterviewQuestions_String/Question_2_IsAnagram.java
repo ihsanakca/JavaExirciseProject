@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Question_2 {
+public class Question_2_IsAnagram {
     public static void main(String[] args) {
         String str="Kara";
         String str1="Arka";

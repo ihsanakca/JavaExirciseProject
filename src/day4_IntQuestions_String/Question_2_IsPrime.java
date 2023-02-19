@@ -1,6 +1,6 @@
 package day4_IntQuestions_String;
 
-public class Question_2 {
+public class Question_2_IsPrime {
     public static void main(String[] args) {
 
         System.out.println("isPrime(\"5\") = " + isPrime("5"));

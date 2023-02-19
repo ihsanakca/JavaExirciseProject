@@ -3,7 +3,7 @@ package day3_InterviewQuestions_String;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Question_3 {
+public class Question_3_FirstNonDublicate {
     public static void main(String[] args) {
         String str = "aantn";
 

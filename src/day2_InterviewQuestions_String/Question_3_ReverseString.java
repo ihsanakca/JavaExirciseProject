@@ -1,6 +1,6 @@
 package day2_InterviewQuestions_String;
 
-public class Question_3 {
+public class Question_3_ReverseString {
     public static void main(String[] args) {
 
         String str ="Ahmet Aykaç";

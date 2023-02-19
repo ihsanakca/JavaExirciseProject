@@ -3,7 +3,7 @@ package day3_InterviewQuestions_String;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Question_2 {
+public class Question_2_FindDuplicates {
     public static void main(String[] args) {
         String str = "yakalıklık";
         System.out.println("findDublicates(str) = " + findDublicates(str));

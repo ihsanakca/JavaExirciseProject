@@ -3,7 +3,7 @@ package day3_InterviewQuestions_String;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Question_4 {
+public class Question_4_AllSubstrings {
     public static void main(String[] args) {
         String str="kale";
         System.out.println("allSubstrings(str) = " + allSubstrings(str));

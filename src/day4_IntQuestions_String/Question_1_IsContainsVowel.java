@@ -3,7 +3,7 @@ package day4_IntQuestions_String;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Question_1 {
+public class Question_1_IsContainsVowel {
     public static void main(String[] args) {
         String str = "Yhyas";
         System.out.println("isContainsVowel(str) = " + isContainsVowel(str));

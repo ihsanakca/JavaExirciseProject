@@ -3,7 +3,7 @@ package day3_InterviewQuestions_String;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Question_1 {
+public class Question_1_charLoop {
     public static void main(String[] args) {
         List<String> list=new ArrayList<>();
         list.add("ali");

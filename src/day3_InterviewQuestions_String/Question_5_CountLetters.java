@@ -2,7 +2,7 @@ package day3_InterviewQuestions_String;
 
 import java.util.*;
 
-public class Question_5 {
+public class Question_5_CountLetters {
     public static void main(String[] args) {
         String str = "Karakusak kalesi";
 

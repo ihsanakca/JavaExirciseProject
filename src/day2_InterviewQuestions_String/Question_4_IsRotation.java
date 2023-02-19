@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Question_4 {
+public class Question_4_IsRotation {
     public static void main(String[] args) {
         String s = "kalay";
         String s1 = "layka";
