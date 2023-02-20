@@ -11,6 +11,7 @@ public class Question_3_SortingString {
         System.out.println("sumOfString(str) = " + sumOfString(str));
 
         System.out.println("sumOfString2(str) = " + sumOfString2(str));
+        System.out.println("sumOfString3(str) = " + sumOfString3(str));
 
 
     }
@@ -64,6 +65,30 @@ için cevap String result="1 2 7 11 11 17 21"; şeklinde olmalıdır.
         for (int i : intArr) {
             result += Integer.toString(i) + " ";
         }
+        return result;
+    }
+    public static String sumOfString3(String str){   // String str ="128 2 3693 65 89 25 10";
+
+        String[] strArr =str.split(" ");
+
+        int count=0;
+
+        int[] intArr = new int[strArr.length];
+
+        for (int i=0; i<strArr.length; i++){
+            for (int j=0; j<strArr[i].length(); j++){
+                count += Integer.parseInt(strArr[i].charAt(j)+"");
+            }
+            intArr[i]=count;
+            count=0;
+        }
+        Arrays.sort(intArr);
+
+        String result = "";
+        for (int i:intArr) {
+            result+= Integer.toString(i)+" ";
+        }
+
         return result;
     }
 }

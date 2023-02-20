@@ -70,6 +70,8 @@ public class ListExample {
         map.put("Davut",40);
         map.put("Engin",50);
 
+        map.forEach((k,v)-> System.out.println(v+" "+k));
+
        Set<String> stringSet = map.keySet();
         Iterator<String> iterator = map.keySet().iterator();
         int sum=0;
