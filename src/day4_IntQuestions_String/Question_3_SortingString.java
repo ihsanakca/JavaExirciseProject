@@ -12,6 +12,7 @@ public class Question_3_SortingString {
 
         System.out.println("sumOfString2(str) = " + sumOfString2(str));
         System.out.println("sumOfString3(str) = " + sumOfString3(str));
+        System.out.println("sumOfString4(str) = " + sumOfString4(str));
 
 
     }
@@ -90,6 +91,36 @@ için cevap String result="1 2 7 11 11 17 21"; şeklinde olmalıdır.
         }
 
         return result;
+    }
+
+    public static int sayiRakamToplami(String sayi){
+
+        String trimSayi = sayi.trim();
+        String[] rakamlar = trimSayi.split("");
+        int sum=0;
+        for (int i = 0; i < trimSayi.length(); i++) {
+            sum += Integer.parseInt(rakamlar[i]);
+        }
+        return sum;
+    }
+
+    public static String sumOfString4(String str){
+
+        String[] s = str.trim().split(" ");
+        int[] newArr = new int[s.length];
+
+        for (int i = 0; i < s.length; i++) {
+            newArr[i]=sayiRakamToplami(s[i]);
+        }
+
+        Arrays.sort(newArr);
+        String siralama="";
+        for (int i = 0; i < newArr.length; i++) {
+            siralama+=String.valueOf(newArr[i]);
+            siralama+=" ";
+        }
+
+        return siralama.trim();
     }
 }
 
