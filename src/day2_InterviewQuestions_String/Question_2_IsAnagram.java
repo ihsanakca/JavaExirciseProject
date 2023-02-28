@@ -19,7 +19,7 @@ public class Question_2_IsAnagram {
         System.out.println("Arrays.equals(s,s1) = " + Arrays.equals(s, s1));
     }
     //How would you write a program to check whether two strings are anagrams?
-    //yara'nın aragramları ->arya, aray, aary,ryaa ....
+    //yara'nın bazı aragramları ->arya, aray, aary,ryaa ....
     public static boolean anagramWords(String str,String str1){
         str=str.toLowerCase();
         str1=str1.toLowerCase();

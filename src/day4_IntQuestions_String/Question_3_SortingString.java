@@ -13,6 +13,7 @@ public class Question_3_SortingString {
         System.out.println("sumOfString2(str) = " + sumOfString2(str));
         System.out.println("sumOfString3(str) = " + sumOfString3(str));
         System.out.println("sumOfString4(str) = " + sumOfString4(str));
+        System.out.println("sumOfString5(str) = " + sumOfString5(str));
 
 
     }
@@ -43,7 +44,7 @@ için cevap String result="1 2 7 11 11 17 21"; şeklinde olmalıdır.
         Arrays.sort(intOfStrArr);
 
         for (int i : intOfStrArr) {
-            result += Integer.toString(i) + " ";
+            result += i+" ";
         }
         return result;
     }
@@ -87,7 +88,7 @@ için cevap String result="1 2 7 11 11 17 21"; şeklinde olmalıdır.
 
         String result = "";
         for (int i:intArr) {
-            result+= Integer.toString(i)+" ";
+            result+= i+" ";
         }
 
         return result;
@@ -121,6 +122,29 @@ için cevap String result="1 2 7 11 11 17 21"; şeklinde olmalıdır.
         }
 
         return siralama.trim();
+    }
+
+    public static String sumOfString5(String str){   // String str ="128 2 3693 65 89 25 10";
+
+        String[] strArr =str.split(" ");
+
+        int[] intArr = new int[strArr.length];
+
+        for (int i=0; i<strArr.length; i++){
+            int count=0;
+            for (int j=0; j<strArr[i].length(); j++){
+                count +=Character.getNumericValue(strArr[i].charAt(j));
+            }
+            intArr[i]=count;
+        }
+        Arrays.sort(intArr);
+
+        String result = "";
+        for (int i:intArr) {
+           // result+= Integer.toString(i)+" ";
+            result+=i+" ";
+        }
+        return result;
     }
 }
 

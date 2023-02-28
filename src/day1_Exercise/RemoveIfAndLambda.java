@@ -12,9 +12,11 @@ public class RemoveIfAndLambda {
         map.put("Engin", 50);
 
         map.forEach((z, c) -> System.out.println("3-B sınıfı öğrencisi " + z + " " + c));
+
+        map.forEach((k,v)-> System.out.println(k+" "+v));
         System.out.println("map = " + map);
 
-        //map.keySet().removeIf(e -> e.charAt(1) == 'a');
+        map.keySet().removeIf(e -> e.substring(1,2).equals("a"));
         map.values().removeIf(e->e==20);
 
         System.out.println("map = " + map);
