@@ -4,15 +4,19 @@ import java.util.*;
 
 public class Challenge {
     public static void main(String[] args) {
-        String str = "ffffaaadddccc";
-        System.out.println("isValid2(str) = " + isValid2(str));
-        System.out.println("isValid3(str) = " + isValid3(str));
+        String str = "asaffsf";
+        rotateAndErase(str);
+//        System.out.println("isValid2(str) = " + isValid2(str));
+//        System.out.println("isValid3(str) = " + isValid3(str));
+
+        System.out.println("isValid4(str) = " + isValid4(str));
 
         List<Integer> tasks = new ArrayList<>(List.of(5, 10, 20, 1, 4));
 
         Integer cycle = 15;
         //System.out.println("getTaskIndexAtCycle(tasks,cycle) = " + getTaskIndexAtCycle(tasks, cycle));
         // System.out.println("getTaskIndexAtCycle2(tasks,cycle) = " + getTaskIndexAtCycle2(tasks, cycle));
+
 
 
     }
@@ -45,7 +49,7 @@ public class Challenge {
      */
     public static boolean isValid(String str) {
         String str1 = str.toLowerCase();
-        //String str2 = str.toLowerCase();
+        String str2 = str.toLowerCase();
         List<Integer> list = new ArrayList<>();
         for (int i = 0; i < str1.length(); ) {
             int count = 0;
@@ -87,7 +91,7 @@ public class Challenge {
         }
 
 
-       /* for (int i = 0; i < str2.length(); i++) {
+        for (int i = 0; i < str2.length(); i++) {
             String newStr = str2.substring(0, i) + str2.substring(i + 1);
             Map<Character, Integer> newCharCount = new HashMap<>();
             for (char c : newStr.toCharArray()) {
@@ -99,7 +103,7 @@ public class Challenge {
             }
         }
 
-        */
+
 //        for (int i = 0; i < list.size(); i++) {
 //            for (int j = i + 1; j < list.size(); j++) {
 //                if (list.get(i) != list.get(j)) {
@@ -111,7 +115,7 @@ public class Challenge {
         return false;
     }
 
-    public static boolean isValid2(String str) {  //acaabbbccssssdddd 3 3 3   4    -> 3,2  -> 2,3
+    public static boolean isValid2(String str) {  //acaabbbccssssdddd 3 3 3   4    -> 3,4
         String str1 = str.toLowerCase();
         List<Integer> list = new ArrayList<>();
 
@@ -129,9 +133,10 @@ public class Challenge {
             return false;
         } else if (list1.size() == 1) {
             return true;
-        } else if ((list1.size() == 2) && ((list1.get(0) == 1) || list1.get(1) == 1)) {
-            return true;
         }
+//        else if ((list1.size() == 2) && ((list1.get(0) == 1) || list1.get(1) == 1)) {
+//            return true;
+//        }
 
         List<Integer> list11 = new ArrayList<>();
         list11.addAll(list1);
@@ -146,12 +151,11 @@ public class Challenge {
                 }
             }
               list2.add(count);
-//            list.remove(list.get(0));
             int n = list.get(0);
             list.removeIf(e -> e == n);
         }
         Collections.sort(list2);
-        return (list2.get(0) == 1) && (list11.get(1) - 1 == list11.get(0));
+        return (list2.get(0) == 1) && (list11.get(1) - 1 == list11.get(0))||((list2.get(0) == 1) && (list11.get(0) == 1));
     }
 
     public static boolean isValid3(String str) {
@@ -172,8 +176,6 @@ public class Challenge {
             return false;
         } else if (list1.size() == 1) {
             return true;
-        } else if ((list1.size() == 2) && ((list1.get(0) == 1) || list1.get(1) == 1)) {
-            return true;
         }
         List<Integer> list11 = new ArrayList<>();
         list11.addAll(list1);
@@ -188,20 +190,67 @@ public class Challenge {
                 }
             }
             list2.add(count);
-            list.remove(list.get(0));
+            int n = list.get(0);
+            list.removeIf(e -> e == n);
         }
         Collections.sort(list2);
-        return (list2.get(0) == 1) && (list11.get(1) - 1 == list11.get(0));
+        return (list2.get(0) == 1) && (list11.get(1) - 1 == list11.get(0))||((list2.get(0) == 1) && (list11.get(0) == 1));
     }
 
+    public static boolean isValid4(String str) {
+        String str1 = str.toLowerCase();
+        List<Integer> list = new ArrayList<>();
+
+
+        for (int i = 0; i < str1.length(); ) {
+            int count;
+            String control = str1.substring(0, 1);
+            count = str1.length() - str1.replace(control, "").length();
+            list.add(count);
+            str1 = str1.replace(control, "");
+        }
+        if (list.stream().distinct().count() == 1) {
+            return true;
+        }
+        for (int i = 0; i < str.length(); i++) {
+            String newStr = str.substring(0, i) + str.substring(i + 1);
+            List<Integer> list1 = new ArrayList<>();
+            for (int j = 0; j < newStr.length(); ) {
+                int count;
+                String control = newStr.substring(0, 1);
+                count = newStr.length() - newStr.replace(control, "").length();
+                list1.add(count);
+                newStr = newStr.replace(control, "");
+            }
+            if (list1.stream().distinct().count() == 1) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static void rotateAndErase(String str){
+
+        for (int i = 0; i < str.length(); i++) {
+            String newStr = str.substring(0, i) + str.substring(i + 1);
+            System.out.println(newStr);
+        }
+
+    }
+
+    /**
+     *
+
+     */
+
     /*
-    Scheduling is how the processor decides which tasks(processes) get to use the processor and for how long. The tasks are
+    Scheduling is how the processor decides which jobs(processes) get to use the processor and for how long. The jobs are
     taken from a task pool based on a specific rule.
     One such rule is the Shortest Task First. Under this rule, the next task to execute is the one with shortest execution time.
-    If there are multiple tasks with same cycles, the rule is to execute the task with the lower index first.
+    If there are multiple jobs with same cycles, the rule is to execute the task with the lower index first.
     In this problem, you will be given a task pool including the execution times (the number of CPU cycles ) for each task.
     Then, you will write a function to determine which task is in execution during a given cycle.
-    The task pool will be given as an array of integers. The tasks are identified by their index in this array (zero based).
+    The task pool will be given as an array of integers. The jobs are identified by their index in this array (zero based).
     And the values in the array represent the number of CPU cycles required to execute that task.
     Your mission is to find the index of the task that is running at a given cycle.
     Let's go over an example scenario
@@ -217,39 +266,39 @@ public class Challenge {
     So we see that Task 1 is executing at cycle 10. Accordingly our function should return 1 as the response. (see below)
 
     Specification
-    Challenge.getTaskIndexAtCycle(tasks, cycle)
+    Challenge.getTaskIndexAtCycle(jobs, cycle)
     Returns the index of the task in execution for a given cycle.
     Parameters
-    tasks: Integers[] - A non-empty array of positive integers representing execution time in cycles needed to finish a task.
+    jobs: Integers[] - A non-empty array of positive integers representing execution time in cycles needed to finish a task.
     cycle: Integer - A number representing the cycle during which we want to find the task in execution
     Return Value
     Integer - The index of task in execution during the given cycle
     Examples
-    tasks	               cycle	Return Value
+    jobs	               cycle	Return Value
     [3,10,20,1,2]	        15	         1
     [3,10,10,20,7,5]	    7	         5
 
 
 
      */
-    public static Integer getTaskIndexAtCycle(List<Integer> tasks, Integer cycle) {
+    public static Integer getTaskIndexAtCycle(List<Integer> jobs, Integer cycle) {
         List<Integer> newTask = new ArrayList<>();
-        newTask.addAll(tasks);
+        newTask.addAll(jobs);
         Collections.sort(newTask);
         int sum = 0;
 
         for (int i = 0; i < newTask.size(); i++) {  //[3,10,20,1,2]	   1 2 3 10 20
             sum += newTask.get(i);
             if (sum >= cycle) {
-                return tasks.indexOf(newTask.get(i));
+                return jobs.indexOf(newTask.get(i));
             }
         }
         return -1;
     }
 
-    public static Integer getTaskIndexAtCycle2(List<Integer> list, Integer cycle) {
+    public static Integer getTaskIndexAtCycle2(List<Integer> jobs, Integer cycle) {
         List<Integer> list1 = new ArrayList<>();
-        list1.addAll(list);
+        list1.addAll(jobs);
         Collections.sort(list1);
 
         List newList = new ArrayList<>();
@@ -260,7 +309,7 @@ public class Challenge {
             }
         }
         System.out.println(newList);
-        return list.indexOf(newList.get(cycle));
+        return jobs.indexOf(newList.get(cycle));
     }
 
 }

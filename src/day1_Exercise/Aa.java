@@ -6,6 +6,12 @@ import java.util.*;
 public class Aa {
     public static void main(String[] args) {
 
+
+
+        Collection <String> collection;
+        collection=new ArrayDeque<>();
+        collection.add("ahmet");
+
    BB bb=new BB();
    BB bb1=new BB();
 

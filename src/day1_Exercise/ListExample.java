@@ -1,6 +1,8 @@
 package day1_Exercise;
 
+import java.time.LocalDate;
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class ListExample {
     public static void main(String[] args) {
@@ -42,6 +44,9 @@ public class ListExample {
         students.add("Sinan");
         students.add("Rabia");
         students.add("Simge");
+
+        System.out.println(LocalDate.now());
+        LocalDate now = LocalDate.now();
 
         System.out.println("students = " + students);
 
@@ -92,9 +97,15 @@ public class ListExample {
         System.out.println("sum2 = " + sum2);
 
 
+
+
         System.out.println("map.keySet().size() = " + map.keySet().size());
         System.out.println("map.values().size() = " + map.values().size());
         System.out.println("map.size() = " + map.size());
+
+        Thread thread1=new Thread();
+        thread1.start();
+        thread1.start();
 
         System.out.println("map = " + map);
         map.values().removeIf(f->f>30);

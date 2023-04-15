@@ -20,7 +20,6 @@ public class Question_5_CountLetters {
 //        System.out.println("list1 = " + list1);
 //        System.out.println("list.equals(list1) = " + list.equals(list1));
 
-
     }
 
 
