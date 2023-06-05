@@ -14,6 +14,7 @@ public class Question_3_SortingString {
         System.out.println("sumOfString3(str) = " + sumOfString3(str));
         System.out.println("sumOfString4(str) = " + sumOfString4(str));
         System.out.println("sumOfString5(str) = " + sumOfString5(str));
+        System.out.println("sumOfString6(str) = " + sumOfString6(str));
 
 
     }
@@ -143,6 +144,46 @@ için cevap String result="1 2 7 11 11 17 21"; şeklinde olmalıdır.
         for (int i:intArr) {
            // result+= Integer.toString(i)+" ";
             result+=i+" ";
+        }
+        return result;
+    }
+       /*
+
+String str="128 2 3693 65 89 25 10"; str içerisindeki boşlukla ayrılmış sayıların sayı değerleri
+toplanarak küçükten büyüğe dizili olarak yeniden bir stringe tanımlayan metod nedir? Bu soru
+için cevap String result="1 2 7 11 11 17 21"; şeklinde olmalıdır.
+     */
+       public static String sumOfString6(String str){
+           String[] arrStr = str.split(" ");
+           int sum=0;
+           String result="";
+           int[] intSortedStr =new int[arrStr.length];
+
+           for (int i = 0; i < arrStr.length; i++) {
+               for (int j = 0; j < arrStr[i].length(); j++) {
+                   sum+=Integer.parseInt(arrStr[i].substring(j,j+1));
+               }
+               intSortedStr[i]=sum;
+               sum=0;
+           }
+           Arrays.sort(intSortedStr);
+           for (int i : intSortedStr) {
+               result+=i+" ";
+           }
+
+           return result;
+       }
+    public static String sumOfString6NoSorting(String str){
+        String[] arrStr = str.split(" ");
+        int sum=0;
+        String result="";
+
+        for (int i = 0; i < arrStr.length; i++) {
+            for (int j = 0; j < arrStr[i].length(); j++) {
+                sum+=Integer.parseInt(arrStr[i].substring(j,j+1));
+            }
+            result+=sum+" ";
+            sum=0;
         }
         return result;
     }
