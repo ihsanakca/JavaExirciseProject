@@ -6,8 +6,8 @@ import java.util.List;
 
 public class Question_4_IsRotation {
     public static void main(String[] args) {
-        String s = "kalay";
-        String s1 = "layka";
+        String s = "sarı";
+        String s1 = "arıs";
 
         System.out.println("isRotation(s,s1) = " + isRotation(s, s1));
         System.out.println("isRotation2(s,s1) = " + isRotation2(s, s1));
@@ -20,15 +20,14 @@ public class Question_4_IsRotation {
     //ve en fazla harf sayısı kadar oluyor
 
     public static boolean isRotation(String str, String str1) {
-        if (str.length() != str1.length()) {
-            return false;
-        }
-        String strstr = str + str;
-        // return (str+str).contains(str1);
-        return strstr.contains(str1);
+        if (str.length() != str1.length())  return false;
+       // String strstr = str + str;
+         return (str+str).contains(str1);
+      //  return strstr.contains(str1);
 
     }
 
+    //bu metot tam sonuç vermeyebilir....eksik
     public static boolean isRotation2(String s1, String s2) {
         if (s1.length() != s2.length()) {
             return false;
@@ -46,9 +45,7 @@ public class Question_4_IsRotation {
             str = str.substring(1) + str.substring(0, 1);
             list.add(str);
         }
-        System.out.println("list = " + list);
-
+     //   System.out.println("list = " + list);
         return list.contains(str1);
     }
-
 }

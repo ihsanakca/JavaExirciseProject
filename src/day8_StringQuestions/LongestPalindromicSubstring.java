@@ -7,13 +7,14 @@ import java.util.List;
 public class LongestPalindromicSubstring {
     public static void main(String[] args) {
 
-        String str = "abbaqqqqqa";
+        String str = "abc";
 
         System.out.println("longestPalindrome(str) = " + longestPalindrome(str));
         System.out.println("largestPolidromicSubstring(str) = " + largestPolidromicSubstring(str));
         System.out.println("longestPalindrome2(str) = " + longestPalindrome2(str));
         System.out.println("polindromic(str) = " + polindromic(str));
         System.out.println("longestPalindrome3(str) = " + longestPalindrome3(str));
+        System.out.println("palindromic(str) = " + palindromic(str));
 
 
     }
@@ -159,6 +160,9 @@ public class LongestPalindromicSubstring {
                 }
             }
         }
+        if (str.length()>0&&max==0){
+            return str.substring(0,1);
+        }
 
         return result;
     }
@@ -166,4 +170,32 @@ public class LongestPalindromicSubstring {
     static boolean isAPalindrome(String str) {
         return str.equals(new StringBuffer(str).reverse().toString());
     }
+
+    public static String palindromic(String str) {
+        if (str.length() == 0) {
+            return "";
+        }
+        String str2 = str;
+        String result = str.substring(0, 1);
+        for (int i = 0; i < str2.length(); i++) {
+            for (int j = 0; j < str.length(); j++) {
+                if (reverse2(str2) && str2.length() >= result.length()) {
+                    result = str2;
+                    break;
+                } else if (str2.length() > 0) {
+                    str2 = str2.substring(1);
+                }
+            }
+            str2 = str.substring(0, str.length() - i - 1);
+        }
+        return result;
+    }
+    public static boolean reverse2(String str) {
+        String result = "";
+        for (int i = str.length() - 1; i >= 0; i--) {
+            result += str.charAt(i);
+        }
+        return str.equalsIgnoreCase(result);
+    }
 }
+
