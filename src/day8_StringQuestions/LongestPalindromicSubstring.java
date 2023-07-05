@@ -7,7 +7,7 @@ import java.util.List;
 public class LongestPalindromicSubstring {
     public static void main(String[] args) {
 
-        String str = "abc";
+        String str = "asdddsc";
 
         System.out.println("longestPalindrome(str) = " + longestPalindrome(str));
         System.out.println("largestPolidromicSubstring(str) = " + largestPolidromicSubstring(str));

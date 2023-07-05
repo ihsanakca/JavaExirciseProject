@@ -5,17 +5,17 @@ import java.util.*;
 public class RenkSiralama {
 
     public static void main(String[] args) {
-        String str = "red2 blue5 black4 green1 gold3";
+        String str = "red21 blue150 black99 green21 gold3 purple99";
         System.out.println("orderColors(str) = " + orderColors(str));
-////      System.out.println(orderColors2(str));
-////        System.out.println("orderColors3(str) = " + orderColors3(str));
-//
-        //       System.out.println("orderColors4(str) = " + orderColors4(str));
-////
-////        System.out.println("orderColors5(str) = " + orderColors5(str));
-//
-       System.out.println("orderColors6(str) = " + orderColors6(str));
-//        System.out.println("orderColors7(str) = " + orderColors7(str));
+        System.out.println(orderColors2(str));
+        System.out.println("orderColors3(str) = " + orderColors3(str));
+
+        System.out.println("orderColors4(str) = " + orderColors4(str));
+
+        System.out.println("orderColors5(str) = " + orderColors5(str));
+
+        System.out.println("orderColors6(str) = " + orderColors6(str));
+        System.out.println("orderColors7(str) = " + orderColors7(str));
         System.out.println("orderColors8(str) = " + orderColors8(str));
         System.out.println("orderColors9(str) = " + orderColors9(str));
         System.out.println("sortColor9danBuyuklerIcin(str) = " + sortColor9danBuyuklerIcin(str));
@@ -186,4 +186,6 @@ public class RenkSiralama {
         }
         return result;
     }
+
+
 }

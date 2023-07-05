@@ -17,6 +17,7 @@ public class Question_3_SortingString {
         System.out.println("sumOfString6(str) = " + sumOfString6(str));
 
 
+
     }
     /*
 
@@ -157,21 +158,21 @@ için cevap String result="1 2 7 11 11 17 21"; şeklinde olmalıdır.
            String[] arrStr = str.split(" ");
            int sum=0;
            String result="";
-           int[] intSortedStr =new int[arrStr.length];
+           int[] intStr =new int[arrStr.length];
 
            for (int i = 0; i < arrStr.length; i++) {
                for (int j = 0; j < arrStr[i].length(); j++) {
                    sum+=Integer.parseInt(arrStr[i].substring(j,j+1));
                }
-               intSortedStr[i]=sum;
+               intStr[i]=sum;
                sum=0;
            }
-           Arrays.sort(intSortedStr);
-           for (int i : intSortedStr) {
+           Arrays.sort(intStr);
+           for (int i : intStr) {
                result+=i+" ";
            }
 
-           return result;
+           return result.trim();
        }
     public static String sumOfString6NoSorting(String str){
         String[] arrStr = str.split(" ");
