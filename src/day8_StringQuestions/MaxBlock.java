@@ -7,11 +7,12 @@ import java.util.List;
 public class MaxBlock {
     public static void main(String[] args) {
 
-        String str="ssakakkkksssss";
+        String str="asssa";
 
         System.out.println("maxBlock(str) = " + maxBlock(str));
         System.out.println("maxBlock2(str) = " + maxBlock2(str));
         System.out.println("maxBlock3(str) = " + maxBlock3(str));
+        System.out.println("Blocksstr(str) = " + Blocksstr(str));
 
 
     }
@@ -67,6 +68,24 @@ public class MaxBlock {
                 }else break;
             }
             max=Math.max(result.length(),max);
+        }
+        return max;
+    }
+
+    public static int Blocksstr (String str){
+        int max=1;
+        int maxNew=1;
+
+        for (int i = 1; i < str.length(); i++) {
+            if (str.charAt(i)==str.charAt(i-1)){
+                maxNew++;
+
+                if (maxNew>max){
+                    max = maxNew;
+                }
+            } else {
+                maxNew=1;
+            }
         }
         return max;
     }

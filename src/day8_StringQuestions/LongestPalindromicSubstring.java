@@ -7,7 +7,7 @@ import java.util.List;
 public class LongestPalindromicSubstring {
     public static void main(String[] args) {
 
-        String str = "asdddsc";
+        String str = "ey edip adanada pide ye";
 
         System.out.println("longestPalindrome(str) = " + longestPalindrome(str));
         System.out.println("largestPolidromicSubstring(str) = " + largestPolidromicSubstring(str));
@@ -15,6 +15,9 @@ public class LongestPalindromicSubstring {
         System.out.println("polindromic(str) = " + polindromic(str));
         System.out.println("longestPalindrome3(str) = " + longestPalindrome3(str));
         System.out.println("palindromic(str) = " + palindromic(str));
+
+        System.out.println("--------------------");
+        System.out.println("longestPalindromicSubString(str) = " + longestPalindromicSubString(str));
 
 
     }
@@ -197,5 +200,29 @@ public class LongestPalindromicSubstring {
         }
         return str.equalsIgnoreCase(result);
     }
+
+    public static String longestPalindromicSubString(String str){
+        String result = "";
+        int max = 0;
+        for (int i = 0; i < str.length(); i++) {
+            for (int j = str.length(); j >i ; j--) {
+                String sub = str.substring(i,j);
+                if (isPalindromeNew(sub)){
+                    if (sub.length()>max){
+                        max = sub.length();
+                        result = sub;
+                    }
+                }
+            }
+        }
+
+        return result;
+    }
+
+
+    public static boolean isPalindromeNew(String s){
+        return (new StringBuffer(s).reverse().toString()).equals(s);
+    }
 }
+
 

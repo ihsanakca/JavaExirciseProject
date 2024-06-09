@@ -9,7 +9,7 @@ public class C {
 
         System.out.println("list = " + list);
 
-        //list.removeIf(e->e<8);
+        list.removeIf(e->e<8);
         System.out.println("list = " + list);
 
         Map<String,Integer> map=new HashMap<>();

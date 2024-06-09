@@ -5,7 +5,7 @@ import java.util.*;
 public class RenkSiralama {
 
     public static void main(String[] args) {
-        String str = "red21 blue150 black99 green21 gold3 purple99";
+        String str = "red2 blue5 black1 green3 gold6 purple4";
         System.out.println("orderColors(str) = " + orderColors(str));
         System.out.println(orderColors2(str));
         System.out.println("orderColors3(str) = " + orderColors3(str));

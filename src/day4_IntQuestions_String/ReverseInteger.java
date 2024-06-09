@@ -2,7 +2,7 @@ package day4_IntQuestions_String;
 
 public class ReverseInteger {
     public static void main(String[] args) {
-        int i = -2147483641;
+        int i = -544;
         System.out.println(reverseInteger(i));
     }
     /*
@@ -45,4 +45,6 @@ Output: 21
         }
         return (int) result;
     }
+
+
 }

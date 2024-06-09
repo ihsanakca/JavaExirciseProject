@@ -1,6 +1,6 @@
 package day00_GeneralUsage;
 
-public class hhhhhhhhhhhhh {
+public class StringEqualation {
     public static void main(String[] args) {
         String t1="Test";
         String t2="Test";

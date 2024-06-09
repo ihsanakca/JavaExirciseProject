@@ -12,6 +12,7 @@ public class Question_4_IsRotation {
         System.out.println("isRotation(s,s1) = " + isRotation(s, s1));
         System.out.println("isRotation2(s,s1) = " + isRotation2(s, s1));
         System.out.println("isRotation3(s,s1) = " + isRotation3(s, s1));
+        System.out.println("stringRotation3(\"ankara\",\"nkara\") = " + stringRotation3("ankara", "karaan"));
 
     }
     //Which method would you use to learn if a string is a rotation of another string?
@@ -21,10 +22,7 @@ public class Question_4_IsRotation {
 
     public static boolean isRotation(String str, String str1) {
         if (str.length() != str1.length())  return false;
-       // String strstr = str + str;
          return (str+str).contains(str1);
-      //  return strstr.contains(str1);
-
     }
 
     //bu metot tam sonuç vermeyebilir....eksik
@@ -47,5 +45,15 @@ public class Question_4_IsRotation {
         }
      //   System.out.println("list = " + list);
         return list.contains(str1);
+    }
+
+    public static boolean stringRotation3(String s, String rotation){
+        String result = s;
+        for (int i = 0; i < rotation.length(); i++) {
+            if(s.contains(rotation.substring(i,i+1))){
+                result=result.replaceFirst(rotation.substring(i,i+1),"");
+            }
+        }
+        return result.isEmpty();
     }
 }

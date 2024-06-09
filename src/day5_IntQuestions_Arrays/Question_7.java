@@ -5,8 +5,8 @@ import java.util.Arrays;
 public class Question_7 {
     public static void main(String[] args) {
 
-        int[] nums={2,3,4,4,8,12,28,12,25,23,9,8,11,10,3,3,3};
-       // System.out.println("Arrays.toString(separateOddsAndEvens(nums)) = " + Arrays.toString(separateOddsAndEvens(nums)));
+        int[] nums={2,3,4,4,8,12,28,12,25,23,9,8,11,10,30,3,30};
+       System.out.println("Arrays.toString(separateOddsAndEvens(nums)) = " + Arrays.toString(separateOddsAndEvens(nums)));
         System.out.println("Arrays.toString(separateOddsAndEvens2(nums)) = " + Arrays.toString(separateOddsAndEvens2(nums)));
     }
 

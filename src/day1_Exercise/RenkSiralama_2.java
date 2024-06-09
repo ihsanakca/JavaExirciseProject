@@ -5,7 +5,7 @@ import java.util.Comparator;
 
 public class RenkSiralama_2 {
     public static void main(String[] args) {
-        String str = "red15 blue15 black15 green150 gold150";
+        String str = "red115 blue515 black1 green10 gold150";
 
         System.out.println(orderColors_1(str));
         System.out.println(orderColors_2(str));
