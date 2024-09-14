@@ -1,5 +1,7 @@
 package day13_DateAndTime;
 
+import day14_Methods.MethodsUsing;
+
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.Period;
@@ -81,8 +83,8 @@ public class C04_DateTimeFormatter {
 
         System.out.println(Arrays.toString(charArray));
 
-        for (int i = 0; i<charArray.length;i++){
-            System.out.print(charArray[i]+" ");
+        for (int i = 0; i<charArray.length;i++) {
+            System.out.print(charArray[i] + " ");
         }
 
     }
