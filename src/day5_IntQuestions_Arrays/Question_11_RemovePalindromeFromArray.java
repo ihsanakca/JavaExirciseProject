@@ -10,12 +10,12 @@ public class Question_11_RemovePalindromeFromArray {
         //interview question
         //list içerisindeki polindrom kelimeleri list içerisinden silen metodu yazınız
 
-        String []strings={"kayak","ali","kaya","kayak","kapak","masa","ama","adam","aya","yapay"};
+        String []strings={"kayak","ali","kaya","ata", "kayak","kapak","masa","ama","adam","aya","yapay"};
         List<String> list=new ArrayList<>(Arrays.asList(strings));
 
         System.out.println("list = " + list);
      //   System.out.println("delete palindrome metodu"+deletePalindrome(list));
-        System.out.println("removePalindrome_1(list) = " + removePalindrome_1(list));
+   //     System.out.println("removePalindrome_1(list) = " + removePalindrome_1(list));
 
         System.out.println("list = " + list);
       //  System.out.println("remove palindrome metodu"+removePalindrome(list));
@@ -23,6 +23,8 @@ public class Question_11_RemovePalindromeFromArray {
 
         System.out.println("removePalindromeWithIterable(list) = " + removePalindromeWithIterable(list));
         System.out.println("list = " + list);
+
+      //  System.out.println("deletePalindrome(list) = " + deletePalindrome(list));
 
     }
     public static List<String>deletePalindrome(List<String>list){
@@ -71,12 +73,12 @@ public class Question_11_RemovePalindromeFromArray {
     public static List<String> removePalindromeWithIterable(List<String>list){
         Iterator<String> iterator=list.iterator();
         while (iterator.hasNext()){
-//            if (iterator.next().equalsIgnoreCase(reverseWord(iterator.next()))){
-//                iterator.remove();
-//            }  // hatalı olur çünkü her döngüde next yapacağı için hiçbir zaman doğru sonuç vermez bunun yerine
-            String str=iterator.next();
+ //           if (iterator.next().equalsIgnoreCase(reverseWord(iterator.next()))){
+ //               iterator.remove();
+ //           }  // hatalı olur çünkü her döngüde next yapacağı için hiçbir zaman doğru sonuç vermez bunun yerine
+           String str=iterator.next();
             if (str.equalsIgnoreCase(reverseWord(str))){
-                iterator.remove();
+               iterator.remove();
             }
         }
         return list;
