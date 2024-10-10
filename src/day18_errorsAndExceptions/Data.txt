@@ -1,0 +1,12 @@
+Birinci Satır
+İkinci Satır
+Üçüncü Satır
+123
+456
+789
+hasan
+12325
+10000
+exception handling
+file not found exception
+ihsan akcair
