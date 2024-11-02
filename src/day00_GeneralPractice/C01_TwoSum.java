@@ -1,5 +1,7 @@
 package day00_GeneralPractice;
 
+import day14_Methods.C01_MethodsUsing;
+
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
@@ -11,6 +13,8 @@ public class C01_TwoSum {
 
         System.out.println("Arrays.toString(twoSum(nums ,target)) = " + Arrays.toString(twoSum(nums, target)));
         System.out.println("Arrays.toString(twoSum_1(nums ,target)) = " + Arrays.toString(twoSum_1(nums, target)));
+
+
     }
 
     /**
